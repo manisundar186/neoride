@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ============================================
+   IMPORT OTHER STYLE FILES
+   ============================================ */
+
+   @import 'assets/css/bootstrap.min.css';
+   @import 'assets/css/custom-styles.css'; // will contain custom css classes
+   @import 'assets/css/media-query.css'; // will contain media queries
+
 /* ============================================
    COLOR VARIABLES - DO NOT ADD OTHER COLORS
    ============================================ */
@@ -8,6 +17,9 @@
     --color-accent: #A3E635;
     --color-text-main: #1E293B;
     --color-text-sub: #64748B;
+    --color-pure-white: #FFFFFF;
+
+    --header-height: 75px;
 }
 
 /* ============================================
@@ -35,4 +47,14 @@ button {
     cursor: pointer;
     font-family: inherit;
     transition: all 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.main-page-content {
+  margin-top: var(--header-height);
 }
