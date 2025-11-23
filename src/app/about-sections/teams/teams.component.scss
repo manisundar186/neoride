@@ -50,6 +50,7 @@
         .team-member:hover .team-member-image {
             transform: scale(1.05);
             box-shadow: 0 12px 32px rgba(16, 185, 129, 0.2);
+            border: 4px solid rgba(var(--color-primary-rgb), .02);
         }
 
         .team-member-image img {
