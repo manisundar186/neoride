@@ -9,7 +9,6 @@ import { ConclusionComponent } from '../home-sections/conclusion/conclusion.comp
 import { LandingComponent } from '../home-sections/landing/landing.component';
 import { ShortInfoComponent } from '../home-sections/short-info/short-info.component';
 import { TrustedPartnersComponent } from '../home-sections/trusted-partners/trusted-partners.component';
-import { UserCommentsComponent } from '../home-sections/user-comments/user-comments.component';
 import { AboutUsComponent } from '../pages/about-us/about-us.component';
 import { BlogsComponent } from '../pages/blogs/blogs.component';
 import { ContactUsComponent } from '../pages/contact-us/contact-us.component';
@@ -17,6 +16,7 @@ import { HomeComponent } from '../pages/home/home.component';
 import { PrivacyPolicyComponent } from '../pages/privacy-policy/privacy-policy.component';
 import { SupportComponent } from '../pages/support/support.component';
 import { TermsServiceComponent } from '../pages/terms-service/terms-service.component';
+import { UserReviewComponent } from '../home-sections/user-review/user-review.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { TermsServiceComponent } from '../pages/terms-service/terms-service.comp
     LandingComponent,
     ShortInfoComponent,
     TrustedPartnersComponent,
-    UserCommentsComponent,
+    UserReviewComponent,
     ConclusionComponent,
     PrivacyPolicyComponent,
     ContactUsComponent,
@@ -49,7 +49,7 @@ import { TermsServiceComponent } from '../pages/terms-service/terms-service.comp
     LandingComponent,
     ShortInfoComponent,
     TrustedPartnersComponent,
-    UserCommentsComponent,
+    UserReviewComponent,
     ConclusionComponent,
     PrivacyPolicyComponent,
     ContactUsComponent,
