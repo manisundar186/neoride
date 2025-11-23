@@ -23,6 +23,11 @@ export class HeaderComponent {
     this.scrollPosition = window.scrollY;
   }
 
+  goTo(path: string) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.helperService.goTo(path);
+  }
+
   toggleMenu() {
     this.show = !this.show;
     this.helperService.toggleScroll(this.show);
