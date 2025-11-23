@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class ShortInfoComponent {
 
+  infoStates: any[] = [
+    {
+      number: '2M+',
+      label: 'Active Users'
+    },
+    {
+      number: '₹50Cr+',
+      label: 'Saved Together'
+    },
+    {
+      number: '4.8★',
+      label: 'User Rating'
+    }
+  ]
 }
