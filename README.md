@@ -68,3 +68,17 @@ NeoRide application official website by Mani Sundar. Application is going to bui
     Clean, informative layout focused on brand story and credibility
 
     Fully responsive arrangement suitable for mobile and desktop
+
+# config.ts
+
+  Centralized configuration file used to store reusable, app-wide constants and settings.
+
+  Features
+
+    Holds environment-independent configurable values
+
+    Provides a single source of truth for URLs, keys, labels, and global options
+
+    Simplifies maintenance by avoiding hard-coded values across components and services
+
+    Easy to import and use anywhere in the application

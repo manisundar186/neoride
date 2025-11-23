@@ -1,0 +1,25 @@
+.pointer {
+  cursor: pointer;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-left-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-top-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-space-around {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
