@@ -5,8 +5,7 @@
     <div class="nav-wrapper d-flex align-items-center">
       <!-- Logo -->
       <div class="logo-container">
-        <img src="assets/logo.jpeg" (click)="goTo('home')" alt="FareCompare Logo" class="logo pointer"
-          width="180" height="50">
+        <img src="assets/logo-{{scrollPosition > config.changeHeaderBackgroundAt ? 'white' : 'green'}}.png" (click)="goTo('home')" alt="FareCompare Logo" class="logo pointer">
       </div>
 
       <!-- Navigation Menu -->
@@ -24,7 +23,7 @@
   <nav class="px-3 flex-space-around w-100 container" *ngIf="deviceType === 'mobile'">
     <!-- Logo -->
     <div class="logo-container">
-      <img src="assets/logo.jpeg" (click)="helperService.goTo('home')" alt="FareCompare Logo" class="logo pointer"
+      <img src="assets/logo-{{scrollPosition > config.changeHeaderBackgroundAt ? 'white' : 'green'}}.png" (click)="helperService.goTo('home')" alt="FareCompare Logo" class="logo pointer"
         width="180" height="50">
     </div>
 

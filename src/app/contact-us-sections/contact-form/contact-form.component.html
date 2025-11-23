@@ -10,8 +10,15 @@
   <!-- Contact Form -->
   <div class="col-lg-7">
     <div class="contact-form-section">
-      <h2>Send us a Message</h2>
-      <p>Fill out the form below and we'll get back to you as soon as possible</p>
+      <div class="d-flex">
+        <div class="conact-form-logo pe-3">
+          <img src="../../../assets/logo-green.png" alt="" width="75" height="75">
+        </div>
+        <div class="form-header">
+          <h2>Send us a Message</h2>
+          <p>Fill out the form below and we'll get back to you as soon as possible</p>
+        </div>
+      </div>
 
       <form id="contactForm">
         <div class="row g-3">
@@ -61,8 +68,10 @@
 
   <!-- Address Details -->
   <div class="col-lg-5 address-section-col position-relative">
-     <img *ngIf="deviceType === 'desktop'" src="../../../assets/images/contact-4.png" alt="" class="position-absolute left-0 bottom-0">
-    <img  *ngIf="deviceType !== 'mobile'" src="../../../assets/images/contact-3.png" alt="" class="position-absolute right-0 bottom-0">
+    <img *ngIf="deviceType === 'desktop'" src="../../../assets/images/contact-4.png" alt=""
+      class="position-absolute left-0 bottom-0">
+    <img *ngIf="deviceType !== 'mobile'" src="../../../assets/images/contact-3.png" alt=""
+      class="position-absolute right-0 bottom-0">
     <div class="address-section">
       <h2>Visit Us</h2>
       <p>Come visit our office or reach out to us</p>

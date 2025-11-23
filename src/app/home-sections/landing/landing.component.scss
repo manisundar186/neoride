@@ -18,7 +18,7 @@
 
 /* highlight NeoRide brand inline */
 .brand {
-  color: #00a86b; /* brand green */
+  color: var(--color-primary); /* brand green */
   // background: linear-gradient(90deg,#00a86b1f 0%, #00a86b0a 100%);
   padding: 0.08rem 0.45rem;
   border-radius: 6px;
