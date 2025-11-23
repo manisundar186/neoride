@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HelperService } from 'src/app/services/helper.service';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  config = this.helperService.config;
+  deviceType = this.helperService.getDeviceFromUserAgent();
+
+  constructor(
+    private helperService: HelperService
+  ) { }
 }
