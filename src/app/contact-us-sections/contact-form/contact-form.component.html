@@ -1,5 +1,5 @@
 <!-- Form and Address Container -->
-<div class="row g-0 form-address-container">
+<div class="row g-0 form-address-container" [ngClass]="{'rounded-0': deviceType !== 'desktop'}">
   <!-- Contact form header -->
   <div class="col-12">
     <div class="contact-header pt-4 pb-3 text-center">
@@ -61,8 +61,8 @@
 
   <!-- Address Details -->
   <div class="col-lg-5 address-section-col position-relative">
-     <img src="../../../assets/images/contact-4.png" alt="" class="position-absolute left-0 bottom-0">
-    <img src="../../../assets/images/contact-3.png" alt="" class="position-absolute right-0 bottom-0">
+     <img *ngIf="deviceType === 'desktop'" src="../../../assets/images/contact-4.png" alt="" class="position-absolute left-0 bottom-0">
+    <img  *ngIf="deviceType !== 'mobile'" src="../../../assets/images/contact-3.png" alt="" class="position-absolute right-0 bottom-0">
     <div class="address-section">
       <h2>Visit Us</h2>
       <p>Come visit our office or reach out to us</p>

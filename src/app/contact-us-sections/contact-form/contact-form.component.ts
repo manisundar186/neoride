@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HelperService } from 'src/app/services/helper.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -12,5 +13,11 @@ export class ContactFormComponent {
   phone2 = '+91 98765 43211';
   email1 = 'KUWY2@example.com';
   email2 = 'W0Lb3@example.com';
+
+  deviceType = this.helperService.getDeviceFromUserAgent();
+
+  constructor(
+    private helperService: HelperService
+  ) { }
 
 }
