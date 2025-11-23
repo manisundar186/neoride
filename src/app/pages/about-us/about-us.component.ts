@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HelperService } from 'src/app/services/helper.service';
 
 @Component({
   selector: 'app-about-us',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AboutUsComponent {
 
+  deviceType = this.helperService.getDeviceFromUserAgent();
+
+  constructor(
+    private helperService: HelperService
+  ) { }
 }

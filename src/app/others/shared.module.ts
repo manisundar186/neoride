@@ -17,6 +17,7 @@ import { PrivacyPolicyComponent } from '../pages/privacy-policy/privacy-policy.c
 import { SupportComponent } from '../pages/support/support.component';
 import { TermsServiceComponent } from '../pages/terms-service/terms-service.component';
 import { UserReviewComponent } from '../home-sections/user-review/user-review.component';
+import { ContactFormComponent } from '../contact-us-sections/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { UserReviewComponent } from '../home-sections/user-review/user-review.co
     AboutComponent,
     TeamsComponent,
     MenuBoxComponent,
+    ContactFormComponent,
   ],
   imports: [
     CommonModule
@@ -59,6 +61,7 @@ import { UserReviewComponent } from '../home-sections/user-review/user-review.co
     AboutComponent,
     TeamsComponent,
     MenuBoxComponent,
+    ContactFormComponent,
   ]
 })
 export class SharedModule { }
