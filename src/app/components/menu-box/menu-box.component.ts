@@ -38,6 +38,7 @@ export class MenuBoxComponent {
   ) { }
 
   goTo(path: string) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     this.close.emit();
     this.helperServ.toggleScroll(false);
     this.helperServ.goTo(path);

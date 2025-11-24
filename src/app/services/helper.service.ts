@@ -28,10 +28,23 @@ export class HelperService {
 
   // function to find the device type from user agent
   getDeviceFromUserAgent(): 'mobile' | 'tablet' | 'desktop' {
-    const userAgent = navigator.userAgent.toLowerCase();
+    const ua = navigator.userAgent.toLowerCase();
+    const width = window.innerWidth;
 
-    if (/mobile|iphone|ipod|android.*mobile/.test(userAgent)) return 'mobile';
-    if (/ipad|tablet|android(?!.*mobile)/.test(userAgent)) return 'tablet';
+    // --- Primary: User Agent detection ---
+    const isMobileUA =
+      /mobile|iphone|ipod|android.*mobile/.test(ua);
+
+    const isTabletUA =
+      /ipad|tablet|android(?!.*mobile)/.test(ua);
+
+    if (isMobileUA) return 'mobile';
+    if (isTabletUA) return 'tablet';
+
+    // --- Secondary: Width fallback ---
+    if (width <= 768) return 'mobile';
+    if (width <= 1024) return 'tablet';
+
     return 'desktop';
   }
 
