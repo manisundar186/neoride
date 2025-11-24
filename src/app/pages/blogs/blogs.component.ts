@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HelperService } from 'src/app/services/helper.service';
 
 @Component({
   selector: 'app-blogs',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./blogs.component.scss']
 })
 export class BlogsComponent {
+
+  deviceType = this.helperService.getDeviceFromUserAgent();
+
+  constructor(
+    private helperService: HelperService
+  ) { }
 
 }

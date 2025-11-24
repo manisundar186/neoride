@@ -8,7 +8,6 @@ import { HelperService } from 'src/app/services/helper.service';
 })
 export class HomeComponent {
 
-  config = this.helperService.config;
   deviceType = this.helperService.getDeviceFromUserAgent();
 
   constructor(

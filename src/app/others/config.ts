@@ -2,15 +2,18 @@ export class Config {
   headerMenuOptions: any = [
     {
       name: 'About Us',
-      path: 'about-us'
+      path: 'about-us',
+      active: false
     },
     {
       name: 'Blogs',
-      path: 'blogs'
+      path: 'blogs',
+      active: false
     },
     {
       name: 'Contact Us',
-      path: 'contact-us'
+      path: 'contact-us',
+      active: false
     }
   ];
   changeHeaderBackgroundAt = 10;

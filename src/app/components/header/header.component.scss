@@ -51,13 +51,15 @@ header {
   bottom: -5px;
   left: 0;
   width: 0;
+  border-radius: 10px;
   height: 2px;
   background: var(--color-accent);
   transition: width 0.3s ease;
 }
 
 .nav-menu a:hover::after,
-.nav-menu a:focus::after {
+.nav-menu a:focus::after,
+.nav-menu a.active::after {
   width: 100%;
 }
 
