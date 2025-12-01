@@ -8,16 +8,41 @@ import { HelperService } from 'src/app/services/helper.service';
 })
 export class ContactFormComponent {
 
-  address = '123, MG Road, Koramangala, Bangalore, Karnataka 560034, India';
-  phone1 = '+91 98765 43210';
-  phone2 = '+91 98765 43211';
-  email1 = 'KUWY2@example.com';
-  email2 = 'W0Lb3@example.com';
-
   deviceType = this.helperService.getDeviceFromUserAgent();
+  officialInfo = this.helperService.officialInfo;
+
+  // form fields
+  fname = '';
+  lname = '';
+  phone = '';
+  email = '';
+  service = '';
+  message = '';
 
   constructor(
     private helperService: HelperService
   ) { }
+
+  handleSubmit() {
+    const button = document.getElementById('submit-btn') as HTMLElement;
+    if (button.classList.contains('loading') || button.classList.contains('success')) {
+      return;
+    }
+
+    // Add loading state
+    button.classList.add('loading');
+
+    // Simulate API call (2 seconds)
+    setTimeout(() => {
+      button.classList.remove('loading');
+      button.classList.add('success');
+
+      // Reset after 2 seconds
+      setTimeout(() => {
+        button.classList.remove('success');
+        console.log(this.fname, this.lname, this.email, this.phone, this.service, this.message);
+      }, 2000);
+    }, 2000);
+  }
 
 }

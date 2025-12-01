@@ -10,7 +10,6 @@ export class ContactUsComponent {
 
   deviceType = this.helperService.getDeviceFromUserAgent();
 
-
   constructor(
     private helperService: HelperService
   ) { }

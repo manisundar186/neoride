@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Config } from '../others/config';
 import { Router } from '@angular/router';
+import { OfficialInfo } from '../others/official-info';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
 export class HelperService {
 
   config = new Config();
+  officialInfo = new OfficialInfo();  
 
   constructor(
     private router: Router,

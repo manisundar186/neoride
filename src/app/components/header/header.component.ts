@@ -33,7 +33,6 @@ export class HeaderComponent {
     const activeMenuItem = this.menuItems.find((menu: any) => menu.path === this.router.url.split('/')[1]);
     if (activeMenuItem)
       activeMenuItem.active = true;
-    console.log(this.menuItems);
   }
 
   @HostListener('window:scroll', [])

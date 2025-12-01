@@ -18,6 +18,7 @@ import { SupportComponent } from '../pages/support/support.component';
 import { TermsServiceComponent } from '../pages/terms-service/terms-service.component';
 import { UserReviewComponent } from '../home-sections/user-review/user-review.component';
 import { ContactFormComponent } from '../contact-us-sections/contact-form/contact-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ContactFormComponent } from '../contact-us-sections/contact-form/contac
     ContactFormComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     HomeComponent,

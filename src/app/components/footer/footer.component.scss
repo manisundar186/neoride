@@ -4,7 +4,7 @@
 .footer {
   background: var(--color-text-main);
   color: var(--color-pure-white);
-  padding: 4rem 0 2rem;
+  padding: 2rem 0;
 }
 
 .footer-logo {
@@ -41,8 +41,7 @@
   transition: all 0.3s ease;
 }
 
-.footer-menu a:hover,
-.footer-menu a:focus {
+.footer-menu a:hover {
   opacity: 1;
   color: var(--color-accent);
   padding-left: 5px;
