@@ -24,27 +24,31 @@
         <div class="row g-3">
           <div class="col-md-6">
             <label for="firstName" class="form-label">First Name *</label>
-            <input type="text" class="form-control" id="firstName" required>
+            <input type="text" class="form-control" id="firstName" required [(ngModel)]="fname"
+              [ngModelOptions]="{standalone: true}">
           </div>
 
           <div class="col-md-6">
             <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastName">
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="lname"
+              [ngModelOptions]="{standalone: true}">
           </div>
 
           <div class="col-md-6">
             <label for="email" class="form-label">Email Address *</label>
-            <input type="email" class="form-control" id="email" required>
+            <input type="email" class="form-control" id="email" required [(ngModel)]="email"
+              [ngModelOptions]="{standalone: true}">
           </div>
 
           <div class="col-md-6">
             <label for="phone" class="form-label">Phone Number *</label>
-            <input type="tel" class="form-control" id="phone" required>
+            <input type="number" class="form-control" id="phone" required [(ngModel)]="phone"
+              [ngModelOptions]="{standalone: true}">
           </div>
 
           <div class="col-12">
             <label for="service" class="form-label">Service Required</label>
-            <select class="form-select" id="service">
+            <select class="form-select" id="service" [(ngModel)]="service" [ngModelOptions]="{standalone: true}">
               <option value="" selected>Select a service</option>
               <option value="home">Home Services</option>
               <option value="maintenance">Maintenance</option>
@@ -55,11 +59,17 @@
 
           <div class="col-12">
             <label for="message" class="form-label">Message *</label>
-            <textarea class="form-control" id="message" required></textarea>
+            <textarea class="form-control" id="message" required [(ngModel)]="message"
+              [ngModelOptions]="{standalone: true}"></textarea>
           </div>
 
           <div class="col-12">
-            <button type="submit" class="submit-btn">Send Message</button>
+            <!-- <button class="submit-btn2" (click)="submit()">Send Message</button> -->
+            <button class="submit-btn" id="submit-btn" (click)="handleSubmit()">
+              <div class="btn-text">Send Message</div>
+              <div class="spinner position-absolute left-0 right-0 top-0 bottom-0 m-auto"></div>
+              <div class="checkmark position-absolute left-0 right-0 top-0 bottom-0 m-auto"></div>
+            </button>
           </div>
         </div>
       </form>
@@ -82,7 +92,7 @@
         </div>
         <div class="address-content">
           <h3>Office Address</h3>
-          <address>{{address}}</address>
+          <address>{{officialInfo.address}}</address>
         </div>
       </div>
 
@@ -93,8 +103,8 @@
         <div class="address-content">
           <h3>Phone</h3>
           <p>
-            <a href="tel:+919876543210">{{phone1}}</a><br>
-            <a href="tel:+919876543211">{{phone2}}</a>
+            <a href="tel:+919876543210">{{officialInfo.phone1}}</a><br>
+            <a href="tel:+919876543211">{{officialInfo.phone2}}</a>
           </p>
         </div>
       </div>
@@ -106,8 +116,8 @@
         <div class="address-content">
           <h3>Email</h3>
           <p>
-            <a href="mailto:info@yourcompany.com">{{email1}}</a><br>
-            <a href="mailto:support@yourcompany.com">{{email2}}</a>
+            <a href="mailto:{{officialInfo.officialEmail}}">{{officialInfo.officialEmail}}</a><br>
+            <a href="mailto:{{officialInfo.privacyEmail}}">{{officialInfo.privacyEmail}}</a>
           </p>
         </div>
       </div>

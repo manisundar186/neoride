@@ -17,7 +17,7 @@
 
       <!-- CTA Button -->
       <div class="nav-cta ms-auto">
-        <button class="btn-download px-3 py-2" aria-label="Download FareCompare App">Download Now</button>
+        <button class="btn-download px-3 py-2" aria-label="Download FareCompare App" (click)="openPopup()">Download Now</button>
       </div>
     </div>
   </nav>
@@ -39,3 +39,41 @@
 <!-- mobile menu items only -->
 <app-menu-box *ngIf="show" title="Confirm action" message="This will be permanent. Continue?"
   (close)="onClose()"></app-menu-box>
+
+  <!-- app download URL QR code -->
+<!-- <app-download-now></app-download-now> -->
+ <div class="overlay" id="overlay" (click)="closePopup($event)">
+    <div class="popup" onclick="event.stopPropagation()">
+        <button class="close-btn" (click)="closePopup()">&times;</button>
+
+        <div class="popup-header">
+            <h2>Download Our App</h2>
+            <p>Choose your platform to get the QR code</p>
+        </div>
+
+        <div class="store-selection" id="storeSelection">
+            <button class="store-btn" (click)="selectStore('appstore')">
+                <div class="store-icon"><img src="../../../assets/icons/appstore.png" /></div>
+                <span>App Store</span>
+            </button>
+            <button class="store-btn" (click)="selectStore('playstore')">
+                <div class="store-icon"><img src="../../../assets/icons/googleplay.png" /></div>
+                <span>Play Store</span>
+            </button>
+        </div>
+
+        <div class="qr-container" id="qrContainer">
+            <div class="qr-box">
+                <div class="qr-placeholder" id="qrCode">
+                  <img class="w-100 h-100" src="../../../assets/images/sample_qr.png" alt="">
+                </div>
+            </div>
+            <div class="qr-info">
+                <h3 id="storeName">App Store</h3>
+                <p>Scan this QR code with your phone camera to download the app</p>
+                <div class="app-url" id="appUrl"></div>
+            </div>
+            <button class="back-btn" (click)="goBack()"><img class="me-1" src="../../../assets/icons/arrow-left.svg" />Choose Another Platform</button>
+        </div>
+    </div>
+</div>
