@@ -19,6 +19,7 @@ import { TermsServiceComponent } from '../pages/terms-service/terms-service.comp
 import { UserReviewComponent } from '../home-sections/user-review/user-review.component';
 import { ContactFormComponent } from '../contact-us-sections/contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
+import { DownloadNowComponent } from '../components/download-now/download-now.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     TeamsComponent,
     MenuBoxComponent,
     ContactFormComponent,
+    DownloadNowComponent
   ],
   imports: [
     CommonModule,
@@ -64,6 +66,7 @@ import { FormsModule } from '@angular/forms';
     TeamsComponent,
     MenuBoxComponent,
     ContactFormComponent,
+    DownloadNowComponent
   ]
 })
 export class SharedModule { }

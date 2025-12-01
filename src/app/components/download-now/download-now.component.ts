@@ -1,72 +1,25 @@
-import { Component, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
-import { HelperService } from 'src/app/services/helper.service';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-download-now',
+  templateUrl: './download-now.component.html',
+  styleUrls: ['./download-now.component.scss']
 })
-export class HeaderComponent {
+export class DownloadNowComponent {
 
-  config = this.helperService.config;
-  menuItems = this.config.headerMenuOptions;
-  scrollPosition = 0;
-  deviceType = this.helperService.getDeviceFromUserAgent();
-  show = false;
 
-  constructor(
-    public helperService: HelperService,
-    private router: Router
-  ) {
-    console.log(this.router.url);
-    this.getActiveMenuItem();
 
-  }
-
-  // function to find the active menu item and highlight it
-  getActiveMenuItem() {
-    // deactivate all menu item
-    this.menuItems.forEach((menu: any) => {
-      menu.active = false;
-    })
-    const activeMenuItem = this.menuItems.find((menu: any) => menu.path === this.router.url.split('/')[1]);
-    if (activeMenuItem)
-      activeMenuItem.active = true;
-  }
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.scrollPosition = window.scrollY;
-  }
-
-  goTo(path: string) {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    this.helperService.goTo(path);
-  }
-
-  toggleMenu() {
-    this.show = !this.show;
-    this.helperService.toggleScroll(this.show);
-  }
-
-  onClose() {
-    this.show = false;
-  }
-
-  // download now related
+  constructor() { }
 
   openPopup() {
     const overlay = document.getElementById('overlay') as HTMLElement;
     overlay.classList.add('active');
-    this.helperService.toggleScroll(true);
   }
 
-  closePopup(event?: any) {
+  closePopup(event: any) {
     const overlay = document.getElementById('overlay') as HTMLElement;
     if (!event || event.target === document.getElementById('overlay')) {
       overlay.classList.remove('active');
-      this.helperService.toggleScroll(false);
       setTimeout(() => {
         this.goBack();
       }, 300);
@@ -77,7 +30,11 @@ export class HeaderComponent {
     document.querySelectorAll('.store-btn').forEach(btn => {
       btn.classList.remove('selected');
     });
-    this.showQR(store);
+    // event.target.closest('.store-btn').classList.add('selected');
+
+    setTimeout(() => {
+      this.showQR(store);
+    }, 200);
   }
 
   showQR(store: string) {
@@ -94,6 +51,10 @@ export class HeaderComponent {
     const storeSelector = document.getElementById('storeSelection') as HTMLElement;
     storeSelector.style.display = 'none';
     qrContainer.classList.add('active');
+
+    const qrElement = document.getElementById('qrCode') as HTMLElement;
+    qrElement.innerHTML = '';
+
 
     storeName.textContent = store === 'appstore' ? 'Apple App Store' : 'Google Play Store';
     appUrl.textContent = appUrls[store];
