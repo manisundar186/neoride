@@ -6,6 +6,7 @@
     font-size: 1.5rem;
   }
 }
+
 /* Form and Address Container */
 .form-address-container {
   background: var(--color-pure-white);
@@ -21,7 +22,7 @@
 }
 
 .contact-form-section h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5625rem, 0.8613rem + 2.8049vw, 3rem);
   font-weight: 700;
   color: var(--color-text-main);
   margin-bottom: 0.5rem;
