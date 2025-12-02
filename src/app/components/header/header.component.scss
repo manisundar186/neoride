@@ -53,7 +53,7 @@ header {
   width: 0;
   border-radius: 10px;
   height: 2px;
-  background: var(--color-accent);
+  background: var(--color-primary);
   transition: width 0.3s ease;
 }
 
@@ -201,13 +201,13 @@ header {
 }
 
 .store-btn:hover {
-  border-color: #10b981;
+  border-color: var(--color-primary);
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
 }
 
 .store-btn.selected {
-  border-color: #10b981;
+  border-color: var(--color-primary);
   background: linear-gradient(135deg, #10b98115 0%, #14b8a615 100%);
 }
 
@@ -276,7 +276,7 @@ header {
   margin-top: 12px;
   font-family: monospace;
   font-size: 13px;
-  color: #10b981;
+  color: var(--color-primary);
   word-break: break-all;
 }
 

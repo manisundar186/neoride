@@ -69,9 +69,7 @@
   box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
 }
 
-.btn-primary-cta:hover,
-.btn-primary-cta:focus {
-  background: var(--color-secondary);
+.btn-primary-cta:hover{
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
 }
